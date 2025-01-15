@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import {
-  FaFacebook,
+  FaFacebookSquare,
+  FaInstagramSquare,
   FaLinkedin,
-  FaWhatsapp,
   FaPhone,
   FaArrowRight,
   FaChevronDown,
   FaAngleRight,
 } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
-import { FaSquareYoutube } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
@@ -37,15 +36,15 @@ const Navbar = () => {
   return (
     <>
       {showSmallNavbar ? (
-        <div className="w-full mx-auto flex flex-col fixed top-0 left-0 right-0 z-40">
+        <div className="fixed top-0 left-0 right-0 z-40 flex flex-col w-full mx-auto">
           {/* Small Navbar */}
           <div className={`bg-slate-100 border-b-2 px-4 md:px-8 py-2 `}>
-            <div className="flex justify-between items-center ">
+            <div className="flex items-center justify-between ">
               {/* Left Section (Hidden on Small Devices) */}
-              <div className="hidden md:flex md:w-full items-center space-x-4 text-sm">
+              <div className="items-center hidden space-x-4 text-sm md:flex md:w-full">
                 <a
-                  href="tel:+91-22-61666555"
-                  className="flex  items-center   text-green-600 hover:text-green-700"
+                  href="tel:+971-504282001"
+                  className="flex items-center text-green-600 hover:text-green-700"
                   aria-label="Phone Number"
                 >
                   <FaPhone size={20} className="mr-1" />
@@ -53,7 +52,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href="mailto:services@baitaltahzeeb.com"
-                  className="flex items-center  text-green-600 hover:text-green-700"
+                  className="flex items-center text-green-600 hover:text-green-700"
                   aria-label="Email Address"
                 >
                   <IoMdMail size={20} className="mr-1" />
@@ -62,13 +61,13 @@ const Navbar = () => {
               </div>
 
               {/* Bismillah Section (Visible on All Devices) */}
-              <div className=" text-center w-full lg:-translate-x-48 sm:text-sm ">
-                <span className="lg:text-xl text-sm font-bold lg:text-gray-700 text-gray-600 text-center">
+              <div className="w-full text-center lg:-translate-x-48 sm:text-sm">
+                <span className="text-sm font-bold text-center text-gray-600 lg:text-xl lg:text-gray-700">
                   بسم الله الرحمن الرحيم
                 </span>
                 <br />
                 <span
-                  className="text-sm font-bold text-gray-600 hover:text-green-600 text-center lg:hidden md:hidden"
+                  className="text-sm font-bold text-center text-gray-600 hover:text-green-600 lg:hidden md:hidden"
                   href="tel:+971-504282001"
                 >
                   Call us: +971-504282001
@@ -76,50 +75,47 @@ const Navbar = () => {
               </div>
 
               {/* Right Section (Hidden on Small Devices) */}
-              <div className="hidden md:flex items-center space-x-4 text-sm">
+              <div className="items-center hidden space-x-4 text-sm md:flex">
                 <a
                   href="https://www.facebook.com"
+                  target="_blank"
                   className="text-blue-500 hover:text-blue-600"
                   aria-label="Facebook"
                 >
-                  <FaFacebook size={20} />
+                  <FaFacebookSquare size={20} />
                 </a>
                 <a
-                  href="https://www.twitter.com"
+                  href="https://x.com/BaitAlTahzeeb"
+                  target="_blank"
                   className="text-black hover:text-gray-700"
                   aria-label="Twitter"
                 >
                   <RiTwitterXFill size={20} />
                 </a>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/bait-al-tahzeeb-6b79a2346/"
+                  target="_blank"
                   className="text-blue-500 hover:text-blue-600"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin size={20} />
                 </a>
                 <a
-                  href="https://www.youtube.com"
-                  className="text-red-600 hover:text-red-700"
-                  aria-label="YouTube"
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  className="text-[#d62976] hover:text-[#bc2a8d]"
+                  aria-label="Instagram"
                 >
-                  <FaSquareYoutube size={20} />
-                </a>
-                <a
-                  href="https://www.whatsapp.com"
-                  className="text-green-500 hover:text-green-600"
-                  aria-label="WhatsApp"
-                >
-                  <FaWhatsapp size={20} />
+                  <FaInstagramSquare size={20} />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Big Navbar */}
-          <div className="bg-white shadow-md  w-full ">
+          <div className="w-full bg-white shadow-md ">
             <div className="flex items-center justify-between px-4 py-4 md:px-8">
-              <div className="text-xl md:text-3xl font-bold uppercase">
+              <div className="text-xl font-bold uppercase md:text-3xl">
                 <Link to={"/"}>
                   <img className="w-24 h-12" src="/images/logo01.jpg" alt="" />
                 </Link>
@@ -139,7 +135,7 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <ul className="hidden md:flex space-x-4">
+              <ul className="hidden space-x-4 md:flex">
                 <li>
                   <Link to="/" className={linkStyle}>
                     Home
@@ -154,9 +150,9 @@ const Navbar = () => {
                   <div className="relative group">
                     <Link to="#" className={linkStyle}>
                       Services{" "}
-                      <FaChevronDown className="mt-1 ml-1 group-hover:rotate-180 transition-all duration-300" />
+                      <FaChevronDown className="mt-1 ml-1 transition-all duration-300 group-hover:rotate-180" />
                     </Link>
-                    <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                    <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                       <div className="py-1" role="menu">
                         <Link
                           to="/services"
@@ -196,9 +192,9 @@ const Navbar = () => {
                   <div className="relative group">
                     <Link to="#" className={linkStyle}>
                       Gallery{" "}
-                      <FaChevronDown className="mt-1 ml-1 group-hover:rotate-180 transition-all duration-300" />
+                      <FaChevronDown className="mt-1 ml-1 transition-all duration-300 group-hover:rotate-180" />
                     </Link>
-                    <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                    <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                       <div className="py-1" role="menu">
                         <Link
                           to="/photos"
@@ -243,7 +239,7 @@ const Navbar = () => {
             </div>
 
             {isMobileMenuOpen && (
-              <div className="md:hidden bg-slate-100 px-4 py-6">
+              <div className="px-4 py-6 md:hidden bg-slate-100">
                 <ul className="space-y-4">
                   <li>
                     <Link
@@ -264,7 +260,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <div className=" relative group">
+                    <div className="relative group">
                       <Link
                         to="#"
                         className={linkStyle + " group"}
@@ -280,7 +276,7 @@ const Navbar = () => {
                         />
                       </Link>
                       {isServicesDropdownOpen && (
-                        <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                        <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                           <div className="py-1" role="menu">
                             <Link
                               to="/services"
@@ -334,7 +330,7 @@ const Navbar = () => {
                         />
                       </Link>
                       {isGalleryDropdownOpen && (
-                        <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                        <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                           <div className="py-1" role="menu">
                             <Link
                               to="/photos"
@@ -386,11 +382,11 @@ const Navbar = () => {
           </div>
         </div>
       ) : (
-        <div className="w-full mx-auto flex flex-col fixed top-0 left-0 right-0 z-40">
+        <div className="fixed top-0 left-0 right-0 z-40 flex flex-col w-full mx-auto">
           {/* Big Navbar */}
-          <div className="bg-white shadow-md  w-full ">
+          <div className="w-full bg-white shadow-md ">
             <div className="flex items-center justify-between px-4 py-4 md:px-8">
-              <div className="text-xl md:text-3xl font-bold uppercase">
+              <div className="text-xl font-bold uppercase md:text-3xl">
                 <Link to={"/"}>
                   <img className="w-24 h-12" src="/images/logo01.jpg" alt="" />
                 </Link>
@@ -410,7 +406,7 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <ul className="hidden md:flex space-x-4">
+              <ul className="hidden space-x-4 md:flex">
                 <li>
                   <Link to="/" className={linkStyle}>
                     Home
@@ -425,9 +421,9 @@ const Navbar = () => {
                   <div className="relative group">
                     <Link to="#" className={linkStyle}>
                       Services{" "}
-                      <FaChevronDown className="mt-2 ml-1 group-hover:rotate-180 transition-all duration-300" />
+                      <FaChevronDown className="mt-2 ml-1 transition-all duration-300 group-hover:rotate-180" />
                     </Link>
-                    <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                    <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                       <div className="py-1" role="menu">
                         <Link
                           to="/services"
@@ -467,9 +463,9 @@ const Navbar = () => {
                   <div className="relative group">
                     <Link to="#" className={linkStyle}>
                       Gallery{" "}
-                      <FaChevronDown className="mt-2 ml-1 group-hover:rotate-180 transition-all duration-300" />
+                      <FaChevronDown className="mt-2 ml-1 transition-all duration-300 group-hover:rotate-180" />
                     </Link>
-                    <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                    <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                       <div className="py-1" role="menu">
                         <Link
                           to="/photos"
@@ -514,7 +510,7 @@ const Navbar = () => {
             </div>
 
             {isMobileMenuOpen && (
-              <div className="md:hidden bg-slate-100 px-4 py-6">
+              <div className="px-4 py-6 md:hidden bg-slate-100">
                 <ul className="space-y-4">
                   <li>
                     <Link
@@ -535,7 +531,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <div className=" relative group">
+                    <div className="relative group">
                       <Link
                         to="#"
                         className={linkStyle + " group"}
@@ -551,7 +547,7 @@ const Navbar = () => {
                         />
                       </Link>
                       {isServicesDropdownOpen && (
-                        <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                        <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                           <div className="py-1" role="menu">
                             <Link
                               to="/services"
@@ -605,7 +601,7 @@ const Navbar = () => {
                         />
                       </Link>
                       {isGalleryDropdownOpen && (
-                        <div className="absolute hidden group-hover:block bg-white w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 ">
+                        <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                           <div className="py-1" role="menu">
                             <Link
                               to="/photos"

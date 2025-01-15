@@ -64,7 +64,7 @@ const CleaningAndMaintenanceServices = () => {
       <div className="p-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <h1 className="mb-8 text-2xl font-bold text-center">
-            Cleaning & Maintenance Services
+            Cleaning Services & Building Maintenance
           </h1>
           {services.map((service, index) => (
             <div

@@ -31,7 +31,7 @@ const Common = () => {
       <div className="absolute inset-0 bg-black opacity-60"></div>
  
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-white pt-5 ">{currentPage}</h1>
+        <h1 className="pt-5 text-4xl font-bold text-white ">{currentPage}</h1>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
-
 import React, { useState } from "react";
 import Common from "../components/common/Common";
 import Layout from "../components/Layout/Layout";
 import Map from "../components/Map/Map";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const MaintenanceServices = () => {
   const services = [
@@ -75,12 +75,11 @@ const MaintenanceServices = () => {
       <Layout>
         <Common />
 
-
-        <div className="bg-gray-100 p-6">
-          <h1 className="text-3xl font-bold text-center mb-8">
+        <div className="p-6 bg-gray-100">
+          <h1 className="mb-8 text-3xl font-bold text-center">
             Maintenance Services
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <ServiceCard key={index} service={service} />
             ))}
@@ -88,7 +87,6 @@ const MaintenanceServices = () => {
         </div>
         <Map />
       </Layout>
-
     </>
   );
 };
@@ -97,12 +95,19 @@ const ServiceCard = ({ service }) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="relative overflow-hidden bg-white rounded-lg shadow-lg">
       <img
         src={service.image}
         alt={service.title}
         className="object-cover w-full h-56"
       />
+      <Link to="/contact">
+        <div className="absolute right-0 flex justify-between py-1 mb-2 font-bold bg-green-600 top-5 opacity-70 sm:px-4 hover:bg-green-700 ">
+          <p className="font-normal font-montserrat text-[12px] sm:text-[12px] text-white ">
+            Book Now
+          </p>
+        </div>
+      </Link>
       <div className="p-4">
         <h2 className="mb-2 text-xl font-semibold text-gray-800">
           {service.title}

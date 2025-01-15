@@ -34,8 +34,9 @@ const Carousel = () => {
       {/* Moving Text (Marquee) */}
       <div className="absolute top-0 left-0 z-10 w-full py-2 overflow-hidden bg-gray-100 border-t whitespace-nowrap bg-opacity-40">
         <div className="inline-block animate-marquee">
-          <span className="px-4 text-sm font-semibold font-inter  text-red-500 sm:text-lg md:text-xl lg:text-2xl">
-            Get the best Cleaning and Maintenance Service. Call Us: +971-504282001,  +971-589138900
+          <span className="px-4 text-sm font-semibold text-red-500 font-inter sm:text-lg md:text-xl lg:text-2xl">
+            Get the best Cleaning Services and Building Maintenance LLC. Call
+            Us: +971-504282001, +971-589138900
           </span>
         </div>
       </div>
@@ -43,13 +44,11 @@ const Carousel = () => {
       {/* Overlay Shadow */}
       <div className="absolute z-10 flex items-center justify-center w-full h-full bg-black bg-opacity-40"></div>
 
-
       <div className="absolute z-10 flex items-center justify-center w-full top-1/2 whitespace-nowrap ">
         <span className="px-4 font-semibold text-center text-white animate-fadeIn sm:text-md md:text-2xl lg:text-3xl font-inter">
           WELCOME TO BAITALTAHZEEB <br />
-          CLEANING & MAINTENANCE <br />
-          SERVICES
-
+          CLEANING SERVICES & BUILDING <br />
+          MAINTENANCE LLC
         </span>
       </div>
 
