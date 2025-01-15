@@ -44,8 +44,8 @@ const TestimonialCarousel = () => {
     //   image: "/images/cleaning1.jpg",
     //   rating: 1,
     // },
-    
-    // Add more testimonials here  
+
+    // Add more testimonials here
     // baitaltahzeeb offers excellent cleaning services at affordable prices. They always ensure each area is meticulously cleaned, providing great satisfaction every time. Highly recommended for deep cleaning needs.
   ];
 
@@ -97,12 +97,11 @@ const TestimonialCarousel = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+      <h2 className="mb-6 text-xl font-semibold text-center sm:text-2xl md:text-3xl">
         What Clients Say <span className="text-green-600">About Us</span>
       </h2>
       {/* Carousel for Desktop */}
-      <div className="hidden md:flex overflow-hidden">
-     
+      <div className="hidden overflow-hidden md:flex">
         {[0, 1, 2].map((offset) => {
           const index = (currentIndex + offset) % testimonials.length;
           return (
@@ -110,9 +109,7 @@ const TestimonialCarousel = () => {
               key={index}
               className="w-1/3 px-4 transition-transform duration-500 transform"
             >
-
-              <div className="p-6 rounded-lg shadow-lg bg-slate-100 h-[300px]">             
-
+              <div className="p-6 rounded-lg shadow-lg bg-slate-100 h-[300px]">
                 <div className="flex items-center mb-4">
                   <img
                     src={testimonials[index].image}
@@ -123,7 +120,9 @@ const TestimonialCarousel = () => {
                     <h3 className="text-lg font-semibold">
                       {testimonials[index].name}
                     </h3>
-                    <div className="flex">{renderStars(testimonials[index].rating)}</div>
+                    <div className="flex">
+                      {renderStars(testimonials[index].rating)}
+                    </div>
                   </div>
                 </div>
                 <p className="text-gray-600">{testimonials[index].text}</p>
@@ -143,8 +142,12 @@ const TestimonialCarousel = () => {
                 className="w-16 h-16 rounded-full"
               />
               <div className="ml-4">
-                <h3 className="text-lg font-semibold">{testimonials[currentIndex].name}</h3>
-                <div className="flex">{renderStars(testimonials[currentIndex].rating)}</div>
+                <h3 className="text-lg font-semibold">
+                  {testimonials[currentIndex].name}
+                </h3>
+                <div className="flex">
+                  {renderStars(testimonials[currentIndex].rating)}
+                </div>
               </div>
             </div>
             <p className="text-gray-600">{testimonials[currentIndex].text}</p>
@@ -153,28 +156,29 @@ const TestimonialCarousel = () => {
       </div>
       {/* Navigation Buttons */}
       <div className="">
-      <button
-        onClick={prevSlide}
-        className="absolute lg:-left-3 top-1/2 transform lg:translate-y-1/3 bg-green-600 p-2 rounded-full shadow-lg hover:bg-green-700 z-10 left-0"
-       
-      >
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 z-10 p-2 transform bg-green-600 rounded-full shadow-lg lg:-left-3 top-1/2 lg:translate-y-1/3 hover:bg-green-700"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
+          <svg
+            className="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
       </div>
 
       <button
         onClick={nextSlide}
-
-        className="absolute lg:-right-3 top-1/2 transform  lg:translate-y-1/3 bg-green-600 p-2 rounded-full shadow-lg hover:bg-green-700 z-10 right-0"
-
-        
+        className="absolute right-0 z-10 p-2 transform bg-green-600 rounded-full shadow-lg lg:-right-3 top-1/2 lg:translate-y-1/3 hover:bg-green-700"
       >
         <svg
           className="w-6 h-6 text-white"
@@ -182,7 +186,12 @@ const TestimonialCarousel = () => {
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
         </svg>
       </button>
     </div>

@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import Common from "../components/common/Common";
 import Map from "../components/Map/Map";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const CleaningServices = () => {
   const services = [
@@ -95,12 +96,19 @@ const ServiceCard = ({ service }) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="relative overflow-hidden bg-white rounded-lg shadow-lg">
       <img
         src={service.image}
         alt={service.title}
         className="object-cover w-full h-56"
       />
+      <Link to="/contact">
+        <div className="absolute right-0 flex justify-between py-1 mb-2 font-bold bg-green-600 top-5 opacity-70 sm:px-4 hover:bg-green-700 ">
+          <p className="font-normal font-montserrat text-[12px] sm:text-[12px] text-white ">
+            Book Now
+          </p>
+        </div>
+      </Link>
       <div className="p-4">
         <h2 className="mb-2 text-xl font-semibold text-gray-800">
           {service.title}

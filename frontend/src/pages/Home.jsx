@@ -21,11 +21,11 @@ const Home = () => {
     <>
       <Helmet>
         <title>
-          Home | Professional Maintaince and Cleaning Services in Dubai
+          Home | Professional Building Maintenance and Cleaning Services in Dubai
         </title>
         <meta
           name="description"
-          content="Welcome to our cleaning and maintenance services website. Providing expert sofa cleaning, building maintenance, and cleaning services in Dubai. Contact us today!"
+          content="Welcome to our cleaning services and building maintenance website. Providing expert sofa cleaning, building maintenance, and cleaning services in Dubai. Contact us today!"
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -53,23 +53,28 @@ const Home = () => {
         <div className="max-w-6xl px-6 mx-auto mt-16 mb-14">
           <h2 className="text-3xl font-semibold aos-box " data-aos="fade-up">
             <span className="text-green-600 "> Baitaltahzeeb -</span>{" "}
-            Professional Cleaning and Maintenance Services Company:
+            Professional Cleaning Services and Building Maintenance LLC Company:
           </h2>
           <p
             className="mt-2 text-gray-600 text-[16px] font-semibold slide-in-left animate-fadeIn aos-box "
             data-aos="fade-up"
           >
-            <span className="font-bold ">We, Baitaltahzeeb </span>are a leading
-            cleaning facility management company, based in{" "}
-            <span className="font-bold">UAE</span>, founded with immense
-            experience in the cleaning industry and is well known as an eminent
-            cleaning company. We offer a variety of professional cleaning
-            options for both residential and commercial spaces. Trust us,
-            Safaiwale for reliable, high-quality cleaning at your home. We
-            assure you that you can get world-class cleaning services such as
-            house cleaning services, office cleaning, floor cleaning, pest
-            control, bird netting, pigeon net for balcony, commercial cleaning
-            services, and so on from Baitaltahzeeb.
+            <span className="font-bold">We Baitaltahzeeb</span> is a premier
+            provider of cleaning services and building maintenance solutions,
+            proudly based in the <span className="font-bold">UAE</span>. With
+            extensive expertise in the industry, we have earned a reputation as
+            a trusted and distinguished name in facility management. We
+            specialize in delivering comprehensive cleaning and maintenance
+            services tailored to both residential and commercial spaces. At
+            Baitaltahzeeb, we are committed to providing reliable, high-quality
+            solutions designed to meet the unique needs of our clients. Our
+            portfolio includes world-class services such as deep cleaning, sofa
+            cleaning, villa and apartment cleaning, pest control, and all over
+            building maintenance. Additionally, we offer expert painting,
+            carpentry, plumbering and ac & electrical services, ensuring your
+            property remains in impeccable condition. Trust Baitaltahzeeb for
+            professional and efficient cleaning and maintenance services that
+            exceed expectations.
           </p>
         </div>
         <HireUs />

@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
       },
       keyframes: {
         fadeIn: {

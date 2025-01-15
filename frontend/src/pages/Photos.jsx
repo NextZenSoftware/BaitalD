@@ -59,7 +59,7 @@ const Photos = () => {
   return (
     <>
       <Helmet>
-        <title>Photos | See Our Cleaning & Maintenance Work</title>
+        <title>Photos | See Our Cleaning Services & Building Maintenance Work</title>
         <meta
           name="description"
           content="View our Photos of successful cleaning and maintenance projects in Dubai. From sofa cleaning to building maintenance, see the results of our professional services."

@@ -7,6 +7,7 @@ const RequestEstimateForm = () => {
     contact: '',
     address: '',
     service: '',
+    email: '',
   });
 
   const handleChange = (e) => {
@@ -17,13 +18,13 @@ const RequestEstimateForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.contact || !formData.address || !formData.service) {
+    if (!formData.name || !formData.contact || !formData.address || !formData.service || !formData.email ) {
       toast.error('All fields are required.');
       return;
     }
 
     try {
-      const response = await fetch('https://bait-al.onrender.com/send-mail', {
+      const response = await fetch('http://localhost:5000/send-mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +36,7 @@ const RequestEstimateForm = () => {
 
       if (response.ok) {
         toast.success('Message sent successfully!');
-        setFormData({ name: '', contact: '', address: '', service: '' });
+        setFormData({ name: '', contact: '', address: '', service: '', email: '' });
       } else {
         toast.error(result.error || 'Failed to send message.');
       }
@@ -72,11 +73,12 @@ const RequestEstimateForm = () => {
           onChange={handleChange}
           className="w-full p-3 border border-green-600 rounded-md focus:outline-none focus:ring focus:ring-green-600 "
         />
+        {/* Email */}
         <input
-          type="text"
-          id="address"
-          placeholder="Address"
-          value={formData.address}
+          type="email"
+          id="email"
+          placeholder="Email"
+          value={formData.email}
           onChange={handleChange}
           className="w-full p-3 border border-green-600 rounded-md focus:outline-none focus:ring focus:ring-green-600 "
         />
@@ -98,11 +100,21 @@ const RequestEstimateForm = () => {
           <option value="sofa_cleaning" className="font-semibold text-black ">Sofa Cleaning</option>
           <option value="pest_control" className="font-semibold text-black ">Pest Control</option>
           <option value="deep_cleaning" className="font-semibold text-black ">Deep Cleaning</option>
-          <option value="painting" className="font-semibold text-black  ">Painting</option>
+          <option value="painting" className="font-semibold text-black ">Painting</option>
           <option value="carpentry" className="font-semibold text-black ">Carpentry</option>
           <option value="plumbering" className="font-semibold text-black ">Plumbering</option>
           <option value="electrical_ac" className="font-semibold text-black ">Electrical & AC Maintaining</option>
         </select>
+
+        {/* address */}
+        <input
+          type="text"
+          id="address"
+          placeholder="Address"
+          value={formData.address}
+          onChange={handleChange}
+          className="w-full p-3 border border-green-600 rounded-md md:col-span-2 focus:outline-none focus:ring focus:ring-green-600"
+        />
 
         {/* Submit Button */}
         <button
