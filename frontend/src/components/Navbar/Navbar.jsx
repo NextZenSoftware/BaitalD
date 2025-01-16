@@ -63,7 +63,7 @@ const Navbar = () => {
               {/* Bismillah Section (Visible on All Devices) */}
               <div className="w-full text-center lg:-translate-x-48 sm:text-sm">
                 <span className="text-sm font-bold text-center text-gray-600 lg:text-xl lg:text-gray-700">
-                  بسم الله الرحمن الرحيم
+                  بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
                 </span>
                 <br />
                 <span
@@ -117,7 +117,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between px-4 py-4 md:px-8">
               <div className="text-xl font-bold uppercase md:text-3xl">
                 <Link to={"/"}>
-                  <img className="w-24 h-12" src="/images/logo01.jpg" alt="" />
+                  <img className="w-24 h-12" src="/images/logo.jpg" alt="" />
                 </Link>
               </div>
 
@@ -388,7 +388,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between px-4 py-4 md:px-8">
               <div className="text-xl font-bold uppercase md:text-3xl">
                 <Link to={"/"}>
-                  <img className="w-24 h-12" src="/images/logo01.jpg" alt="" />
+                  <img className="w-24 h-12" src="/images/logo.jpg" alt="" />
                 </Link>
               </div>
 

@@ -175,13 +175,13 @@ const AboutUs = () => {
                 </h1>
               </div>
               <div>
-                <p className="text-center  text-gray-600 max-w-3xl mx-auto lg:text-[18px] md:text-[16px] text-sm px-3">
+                <p className="max-w-3xl mx-auto font-semibold text-center text-gray-700">
                   <span className="text-green-600">
                     Bait Al Tahzeeb Cleaning Services & Building Maintenance
                   </span>{" "}
                   Support is directed by an experienced team that is dedicated
                   to innovation, excellence and committed to delivering the very
-                  best web solutions to our UAE client base.
+                  best cleaning services and building maintenance to our UAE client base.
                 </p>
               </div>
             </div>

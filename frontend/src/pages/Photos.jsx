@@ -35,7 +35,7 @@ const Photos = () => {
       id: 6,
       description:
         "Custom carpentry services, including furniture repairs and installations.",
-      image: "/images/carpentry2.jpg",
+      image: "/images/carpentry5.jpg",
     },
     // {
     //   id: 7,
@@ -74,11 +74,11 @@ const Photos = () => {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {PhotosClicked.map((photo) => (
-              <div key={photo.id} className="mb-4">
+              <div key={photo.id} className="mb-4 border-[15px] border-green-600">
                 <img
                   src={photo.image}
                   alt={`Photo ${photo.id}`}
-                  className="object-cover w-full rounded-sm h-72"
+                  className="object-cover w-full overflow-hidden transition-all duration-500 rounded-sm h-72 hover:scale-105"
                 />
               </div>
             ))}

@@ -5,37 +5,37 @@ const TestimonialCarousel = () => {
     {
       name: "Mrs Ava Thompson",
       text: "Fantastic service by Bait Al Tahzeeb! The team was highly professional, arrived on time, and left my home looking immaculate. Every detail was taken care of, and the results exceeded my expectations. I’ll definitely be using their services again!",
-      image: "/images/cleaning1.jpg",
+      image: "/images/avt1.jpeg",
       rating: 5,
     },
     {
       name: "Mr Ethan Patel",
       text: "Bait Al Tahzeeb is giving Very good service! The team was professional and did a thorough job. A couple of small areas were overlooked, but overall, I’m happy with the outcome and would hire them again.",
-      image: "/images/cleaning1.jpg",
+      image: "/images/avt2.jpg",
       rating: 4,
     },
     {
       name: "Miss Olivia Harris",
       text: "Absolutely amazing work done by Bait Al Tahzeeb! The cleaning team was friendly, thorough, and efficient. They made my place look brand new and even took care of areas I thought were impossible to clean. Highly recommended!",
-      image: "/images/cleaning1.jpg",
+      image: "/images/avt4.jpg",
       rating: 5,
     },
     {
       name: "Mr Liam Robinson",
       text: "The service was okay but not outstanding. While the team cleaned most areas decently, they missed some corners and didn’t spend enough time on deep cleaning. It felt a bit rushed.",
-      image: "/images/cleaning1.jpg",
+      image: "/images/avt3.jpg",
       rating: 3,
     },
     {
       name: "Mrs Mia Clark",
       text: "Excellent service from start to finish! The team was efficient, respectful, and left my home sparkling clean. They paid close attention to detail, and I couldn’t be happier with the results. Will definitely use their service again!",
-      image: "/images/cleaning1.jpg",
+      image: "/images/avt5.jpg",
       rating: 5,
     },
     {
       name: "Mr Noah Johnson",
       text: "Great experience! The cleaning was done well, and the staff was polite and hardworking. A bit more attention to detail in certain spots would have made it perfect, but I’m satisfied with the service.",
-      image: "/images/cleaning1.jpg",
+      image: "/images/avt.jpg",
       rating: 4,
     },
     // {
@@ -93,7 +93,7 @@ const TestimonialCarousel = () => {
 
   return (
     <div
-      className="relative w-full max-w-6xl px-4 py-8 mx-auto mt-16"
+      className="relative w-full px-4 py-8 mx-auto mt-16 max-w-7xl"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

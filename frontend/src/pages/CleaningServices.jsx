@@ -104,7 +104,7 @@ const ServiceCard = ({ service }) => {
       />
       <Link to="/contact">
         <div className="absolute right-0 flex justify-between py-1 mb-2 font-bold bg-green-600 top-5 opacity-70 sm:px-4 hover:bg-green-700 ">
-          <p className="font-normal font-montserrat text-[12px] sm:text-[12px] text-white ">
+          <p className="font-normal font-montserrat text-[12px] sm:text-[12px] text-white px-1">
             Book Now
           </p>
         </div>

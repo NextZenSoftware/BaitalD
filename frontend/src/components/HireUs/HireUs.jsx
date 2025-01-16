@@ -32,7 +32,7 @@ const HireUs = () => {
     },
   ];
   return (
-    <div className="max-w-6xl px-4 mx-auto sm:px-6 md:px-8 ">
+    <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8 ">
       <h2
         className="text-xl font-semibold text-center text-black sm:text-2xl md:text-3xl aos-box"
         data-aos="fade-up"

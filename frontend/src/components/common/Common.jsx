@@ -13,7 +13,7 @@ const Common = () => {
     "/services": "Services",
     "/gallery": "Gallery",
     "/cleaning": "Our Cleaning Services",
-    "/maintaince": "Our Maintaince Services",
+    "/maintaince": "Our Maintenance Services",
     "/photos": "Photos Gallery",
     "/videos": "Videos Gallery",
   };
@@ -31,7 +31,7 @@ const Common = () => {
       <div className="absolute inset-0 bg-black opacity-60"></div>
  
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="pt-5 text-4xl font-bold text-white ">{currentPage}</h1>
+        <h1 className="px-2 pt-5 text-3xl font-bold text-white lg:text-4xl ">{currentPage}</h1>
       </div>
     </div>
   );
