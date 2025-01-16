@@ -6,7 +6,7 @@ const images = [
   "/images/caraousal8.png",
   "/images/caraousal3.jpg",
   "/images/caraousal5.jpg",
-  "/images/caraousal6.jpg",
+  "/images/masjid.jpg",
   "/images/caraousal2.jpg",
 ];
 
@@ -64,7 +64,7 @@ const Carousel = () => {
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="object-cover w-full h-full"
+              className="w-full h-full "
             />
           </div>
         ))}

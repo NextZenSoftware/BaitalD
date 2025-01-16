@@ -50,7 +50,7 @@ const Home = () => {
         <Carousel />
         <RequestEstimateForm />
 
-        <div className="max-w-6xl px-6 mx-auto mt-16 mb-14">
+        <div className="px-6 mx-auto mt-16 max-w-7xl mb-14">
           <h2 className="text-3xl font-semibold aos-box " data-aos="fade-up">
             <span className="text-green-600 "> Baitaltahzeeb -</span>{" "}
             Professional Cleaning Services and Building Maintenance LLC Company:

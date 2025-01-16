@@ -47,7 +47,7 @@ const RequestEstimateForm = () => {
   };
   return (
 
-    <div className="w-full max-w-6xl p-6 mx-auto mt-5 rounded-lg shadow-lg bg-gray-50">
+    <div className="w-full p-6 mx-auto mt-5 rounded-lg shadow-lg max-w-7xl bg-gray-50">
       <h2 className="mb-4 text-3xl font-semibold text-green-600">
 
         Request an Estimate :

@@ -74,7 +74,7 @@ const Contact = () => {
       <Layout>
         <Common />
         <div className="min-h-[480px]">
-          <h1 className="mt-5 text-2xl font-bold text-center">
+          <h1 className="px-4 mt-5 text-2xl font-bold text-center">
             Bait Al Tahzeeb Cleaning Services & Building Maintenance LLC
           </h1>
           <div className="flex flex-col max-w-6xl gap-10 px-4 mx-auto mt-6 md:flex-row">
@@ -84,15 +84,15 @@ const Contact = () => {
                 Do not hesitate to contact us
               </h1>
               <div className="flex items-start gap-3 mt-10">
-                <div className="flex items-center justify-center mt-10 rounded-full w-14 h-14 bg-slate">
-                  <FaPhone size={30} />
+                <div className="flex items-center justify-center w-10 h-10 mt-10 rounded-full">
+                  <FaPhone size={25} className="text-green-600" />
                 </div>
                 <div>
                   <h2 className="mb-2 font-serif text-lg font-semibold text-pure-greys-500">
                     Call Us
                   </h2>
                   <ul className="space-y-2">
-                    <li className="flex gap-2 font-extrabold transition-all duration-200 cursor-pointer hover:text-slate">
+                    <li className="flex gap-2 font-extrabold transition-all duration-200 cursor-pointer hover:text-green-600">
                       <img
                         src="https://flagcdn.com/w20/ae.png"
                         alt="United Arab Emirates Flag"
@@ -100,7 +100,7 @@ const Contact = () => {
                       />
                       +971-504282001
                     </li>
-                    <li className="flex gap-2 font-extrabold transition-all duration-200 cursor-pointer hover:text-slate">
+                    <li className="flex gap-2 font-extrabold transition-all duration-200 cursor-pointer hover:text-green-600">
                       <img
                         src="https://flagcdn.com/w20/ae.png"
                         srcSet="https://flagcdn.com/w40/ae.png 2x"
@@ -114,13 +114,13 @@ const Contact = () => {
               </div>
               <div className="flex items-start gap-3 mt-10">
                 <div className="mt-2">
-                  <MdOutlineEmail className="p-1 rounded-full w-14 h-14 bg-slate" />
+                  <MdOutlineEmail className="w-10 h-10 p-1 text-green-600 rounded-full" />
                 </div>
                 <div className="flex flex-col">
                   <h2 className="mb-1 font-serif text-lg font-semibold text-pure-greys-500">
                     Email Us
                   </h2>
-                  <h3 className="text-lg font-bold transition-all duration-200 cursor-pointer font-title hover:text-slate">
+                  <h3 className="text-lg font-bold transition-all duration-200 cursor-pointer font-title hover:text-green-600">
                     services@baitaltahzeeb.com
                   </h3>
                 </div>

@@ -25,7 +25,7 @@ const Services = () => {
     },
     {
       id: 5,
-      icons: "/images/carpentry2.jpg",
+      icons: "/images/carpentry5.jpg",
       title: "Carpentry",
     },
     {
@@ -50,12 +50,18 @@ const Services = () => {
     },
   ];
   return (
-    <div className="max-w-6xl px-4 mx-auto mt-16 sm:px-6 md:px-8">
-      <h2 className="text-xl font-semibold text-center text-black sm:text-2xl md:text-3xl">
+    <div className="px-4 mx-auto mt-16 max-w-7xl sm:px-6 md:px-8">
+      <h2
+        className="text-xl font-semibold text-center text-black sm:text-2xl md:text-3xl animate-fadeIn aos-box"
+        data-aos="fade-up"
+      >
         Our Service Providers across <span className="text-green-600">UAE</span>
       </h2>
 
-      <p className="mt-4 text-sm text-center text-gray-500 sm:text-base">
+      <p
+        className="mt-2 text-gray-600 text-[16px] font-semibold slide-in-left animate-fadeIn aos-box "
+        data-aos="fade-up"
+      >
         We believe there is a need for quality professional cleaning services
         and building maintenance in UAE. After the successful services in Dubai
         and its neighbor cities, we thought it is time to reach more people
@@ -68,7 +74,8 @@ const Services = () => {
           {data.map((item) => (
             <div
               key={item.id}
-              className="relative overflow-hidden rounded-sm shadow-md"
+              className="relative overflow-hidden rounded-md shadow-md border-[8px] border-green-500 animate-fadeIn aos-box"
+              data-aos="fade-up"
             >
               <Link to="/contact">
                 <img
@@ -78,11 +85,11 @@ const Services = () => {
                 />
               </Link>
               <Link to="/contact">
-              <div className="absolute right-0 flex justify-between py-1 mb-2 font-bold bg-green-600 top-5 opacity-70 sm:px-4 hover:bg-green-700 ">
-                <p className="font-normal font-montserrat text-[12px] sm:text-[12px] text-white ">
-                  Book Now
-                </p>
-              </div>
+                <div className="absolute right-0 flex justify-between py-1 mb-2 font-bold bg-green-600 top-5 opacity-70 sm:px-4 hover:bg-green-700 ">
+                  <p className="font-normal font-montserrat text-[12px] sm:text-[12px] text-white px-1">
+                    Book Now
+                  </p>
+                </div>
               </Link>
               <div className="absolute inset-x-0 bottom-0 text-white bg-black opacity-50">
                 <h3 className="py-2 text-sm font-semibold text-center sm:text-base md:text-lg">

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Common from "../common/Common";
-
+import { FaArrowRight } from "react-icons/fa";
 
 const CleaningAndMaintenanceServices = () => {
-
-
   const services = [
     {
       title: "Deep Cleaning Services",
@@ -62,66 +60,56 @@ const CleaningAndMaintenanceServices = () => {
   return (
     <>
       <div className="p-6 bg-gray-100">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h1 className="mb-8 text-2xl font-bold text-center">
             Cleaning Services & Building Maintenance
           </h1>
           {services.map((service, index) => (
             <div
               key={index}
-
               className="items-center justify-between p-6 mb-6 space-y-4 transition duration-300 bg-white rounded-lg shadow-md hover:shadow-xl lg:flex"
-
             >
-              <div>
+              <div className="pr-8 w-[90%]">
                 <h2 className="mb-2 text-xl font-semibold text-gray-800">
                   {service.title}
                 </h2>
-
-                {/* <p className="text-gray-600 lg:hidden md:hidden">
-                  {services.map((service, index) => (
-                    <ServiceCard key={index} service={service} />
-                  ))}
-                </p> */}
-
-                <p className="leading-snug text-gray-600 sm:text-base">{service.description}</p>
-
+                <p className="leading-snug text-gray-600 sm:text-base">
+                  {service.description}
+                </p>
               </div>
               <div>
                 <Link
                   to={"/contact"}
-
-                  className="px-4 py-2 text-white transition bg-green-600 rounded-md lg:ml-5 hover:bg-green-700"
-
+                  className="px-4 py-2 text-white transition bg-green-600 rounded-md hover:bg-green-700"
                 >
-                  Booking
+                  Book Now
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex items-center justify-between max-w-5xl mx-auto ">
-          <div> <Link
-            to={"/maintaince"}
-
-            className="px-4 py-2 text-white transition bg-green-600 rounded-md lg:py-3 hover:bg-green-700"
-
-          >
-            Maintaince Services
-          </Link></div>
+        <div className="flex items-center justify-between max-w-6xl mx-auto ">
           <div>
-          <Link
-            to={"/cleaning"}
-
-            className="px-4 py-2 text-white transition bg-green-600 rounded-md lg:py-3 lg:ml-5 hover:bg-green-700"
-
-          >
-            Cleaning Services
-          </Link>
+            {" "}
+            <Link
+              to={"/maintaince"}
+              className="flex items-center px-4 py-2 text-white transition bg-green-600 rounded-md lg:py-3 hover:bg-green-700"
+            >
+              Maintenance Services
+              <FaArrowRight className="ml-1" />
+            </Link>
+          </div>
+          <div>
+            <Link
+              to={"/cleaning"}
+              className="flex items-center px-4 py-2 text-white transition bg-green-600 rounded-md lg:py-3 lg:ml-5 hover:bg-green-700"
+            >
+              Cleaning Services
+              <FaArrowRight className="ml-1" />
+            </Link>
+          </div>
         </div>
-        </div>
-      
       </div>
     </>
   );
