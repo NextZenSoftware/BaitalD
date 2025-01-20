@@ -155,7 +155,7 @@ const TestimonialCarousel = () => {
         </div>
       </div>
       {/* Navigation Buttons */}
-      <div className="">
+      
         <button
           onClick={prevSlide}
           className="absolute left-0 z-10 p-2 transform bg-green-600 rounded-full shadow-lg lg:-left-3 top-1/2 lg:translate-y-1/3 hover:bg-green-700"
@@ -173,9 +173,8 @@ const TestimonialCarousel = () => {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-        </button>
-      </div>
-
+        </button>     
+        
       <button
         onClick={nextSlide}
         className="absolute right-0 z-10 p-2 transform bg-green-600 rounded-full shadow-lg lg:-right-3 top-1/2 lg:translate-y-1/3 hover:bg-green-700"
@@ -194,7 +193,8 @@ const TestimonialCarousel = () => {
           />
         </svg>
       </button>
-    </div>
+      </div>
+    
   );
 };
 
