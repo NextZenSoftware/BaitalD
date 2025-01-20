@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout/Layout'
 import Common from '../components/common/Common'
 import { Helmet } from 'react-helmet';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Photos = () => {
   const PhotosClicked = [
@@ -37,25 +40,14 @@ const Photos = () => {
         "Custom carpentry services, including furniture repairs and installations.",
       image: "/images/carpentry5.jpg",
     },
-    // {
-    //   id: 7,
-    //   description:
-    //     "Expert roof inspections and repairs to prevent leaks and damages.",
-    //   image: "/images/cleaning2.jpg",
-    // },
-    // {
-    //   id: 8,
-    //   description:
-    //     "Protect your home with advanced waterproofing solutions for walls and roofs.",
-    //   image: "/images/cleaning2.jpg",
-    // },
-    // {
-    //   id: 9,
-    //   description:
-    //     "Repair and maintenance services for all major home appliances.",
-    //   image: "/images/cleaning2.jpg",
-    // },
+    
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 200, // Offset (distance from top to trigger animation)   
+    });
+  }, []);
   return (
     <>
       <Helmet>
@@ -68,13 +60,13 @@ const Photos = () => {
       <Layout>
         <Common />
         <div className="p-6 bg-gray-100">
-          <h1 className="mb-8 text-3xl font-bold text-center">
+          <h1 className="mb-8 lg:text-3xl text-2xl font-bold text-center animate-fadeIn aos-box" data-aos="fade-up">
             A few photos shared by our happy clients.
           </h1>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 animate-fadeIn aos-box" data-aos="fade-up">
             {PhotosClicked.map((photo) => (
-              <div key={photo.id} className="mb-4 border-[15px] border-green-600">
+              <div key={photo.id} className="mb-4 border-[15px] border-green-600  rounded-md animate-fadeIn aos-box" data-aos="fade-up">
                 <img
                   src={photo.image}
                   alt={`Photo ${photo.id}`}

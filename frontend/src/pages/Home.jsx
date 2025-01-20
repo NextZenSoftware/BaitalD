@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import Carousel from "../components/Carousel/Carousel";
 import RequestEstimateForm from "../components/RequestEstimateForm/RequestEstimateForm";
@@ -10,13 +10,13 @@ import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Home = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration
-      offset: 200, // Offset (distance from top to trigger animation)
-    });
-  }, []);
+const Home = () => {     
+useEffect(() => {
+  AOS.init({
+    duration: 1000, // Animation duration
+    offset: 200, // Offset (distance from top to trigger animation)   
+  });
+}, []);
   return (
     <>
       <Helmet>
@@ -47,8 +47,7 @@ const Home = () => {
         </script>
       </Helmet>
       <Layout>
-        <Carousel />
-        <RequestEstimateForm />
+        <Carousel/>          
 
         <div className="px-6 mx-auto mt-16 max-w-7xl mb-14">
           <h2 className="text-3xl font-semibold aos-box " data-aos="fade-up">
@@ -79,6 +78,7 @@ const Home = () => {
         </div>
         <HireUs />
         <Services />
+        <RequestEstimateForm />
         <TestimonialCarousel />
         <Map />
       </Layout>

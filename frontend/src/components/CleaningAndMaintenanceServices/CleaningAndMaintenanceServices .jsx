@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Common from "../common/Common";
 import { FaArrowRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const CleaningAndMaintenanceServices = () => {
   const services = [
@@ -56,24 +58,30 @@ const CleaningAndMaintenanceServices = () => {
         "Transform your home with our painting services. We offer wall repair, waterproofing, and a variety of paint finishes to refresh your space.",
     },
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 200, // Offset (distance from top to trigger animation)   
+    });
+  }, []);
 
   return (
     <>
       <div className="p-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
-          <h1 className="mb-8 text-2xl font-bold text-center">
+          <h1 className="mb-8 text-2xl font-bold text-center animate-fadeIn aos-box" data-aos="fade-up">
             Cleaning Services & Building Maintenance
           </h1>
           {services.map((service, index) => (
             <div
               key={index}
-              className="items-center justify-between p-6 mb-6 space-y-4 transition duration-300 bg-white rounded-lg shadow-md hover:shadow-xl lg:flex"
+              className="items-center justify-between p-6 mb-6 space-y-4 transition duration-300 bg-white rounded-lg shadow-md hover:shadow-xl lg:flex animate-fadeIn aos-box" data-aos="fade-up"
             >
-              <div className="pr-8 w-[90%]">
-                <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              <div className="sm:w-[90%]">
+                <h2 className="mb-2 text-xl font-semibold text-gray-800 ">
                   {service.title}
                 </h2>
-                <p className="leading-snug text-gray-600 sm:text-base">
+                <p className="leading-snug text-gray-600 sm:text-base ">
                   {service.description}
                 </p>
               </div>
@@ -89,12 +97,12 @@ const CleaningAndMaintenanceServices = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-between max-w-6xl mx-auto ">
+        <div className="flex items-center justify-between max-w-6xl mx-auto  gap-3">
           <div>
             {" "}
             <Link
               to={"/maintaince"}
-              className="flex items-center px-4 py-2 text-white transition bg-green-600 rounded-md lg:py-3 hover:bg-green-700"
+              className="flex items-center px-4  text-white transition bg-green-600 rounded-md lg:py-3 hover:bg-green-700 animate-fadeIn aos-box" data-aos="fade-up"
             >
               Maintenance Services
               <FaArrowRight className="ml-1" />
@@ -103,7 +111,7 @@ const CleaningAndMaintenanceServices = () => {
           <div>
             <Link
               to={"/cleaning"}
-              className="flex items-center px-4 py-2 text-white transition bg-green-600 rounded-md lg:py-3 lg:ml-5 hover:bg-green-700"
+              className="flex items-center px-4 text-white transition bg-green-600 rounded-md lg:py-3 lg:ml-5 hover:bg-green-700 animate-fadeIn aos-box" data-aos="fade-up"
             >
               Cleaning Services
               <FaArrowRight className="ml-1" />

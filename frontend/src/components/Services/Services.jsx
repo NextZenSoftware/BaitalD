@@ -74,7 +74,7 @@ const Services = () => {
           {data.map((item) => (
             <div
               key={item.id}
-              className="relative overflow-hidden rounded-md shadow-md border-[8px] border-green-500 animate-fadeIn aos-box"
+              className="relative overflow-hidden rounded-md shadow-md border-[2px] border-green-500 animate-fadeIn aos-box"
               data-aos="fade-up"
             >
               <Link to="/contact">
