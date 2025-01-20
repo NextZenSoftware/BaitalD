@@ -10,6 +10,8 @@ import CleaningServices from './pages/CleaningServices';
 import MaintenanceServices from './pages/MaintenanceServices';
 import Photos from './pages/Photos';
 import Videos from './pages/Videos';
+import MusicControl from './components/MusicControl/MusicControl';
+
 
 
 
@@ -27,6 +29,7 @@ function App() {
         <Route path="/photos" element={<Photos/>} />
         <Route path="/videos" element={<Videos />} />
       </Routes>
+      <MusicControl/>
     </>
   );
 }

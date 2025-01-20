@@ -421,7 +421,7 @@ const Navbar = () => {
                   <div className="relative group">
                     <Link to="#" className={linkStyle}>
                       Services{" "}
-                      <FaChevronDown className="mt-2 ml-1 transition-all duration-300 group-hover:rotate-180" />
+                      <FaChevronDown className="mt-1 ml-1 transition-all duration-300 group-hover:rotate-180" />
                     </Link>
                     <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                       <div className="py-1" role="menu">
@@ -430,10 +430,10 @@ const Navbar = () => {
                           className="flex justify-between px-4 py-3 gap-1 text-sm text-black hover:bg-green-600 font-semibold text-[17px]"
                         >
                           All{" "}
-                          <spa className="">
+                          <span className="">
                             {" "}
                             <FaAngleRight className="mt-1" size={15} />
-                          </spa>
+                          </span>
                         </Link>
                         <Link
                           to="/maintaince"
@@ -463,7 +463,7 @@ const Navbar = () => {
                   <div className="relative group">
                     <Link to="#" className={linkStyle}>
                       Gallery{" "}
-                      <FaChevronDown className="mt-2 ml-1 transition-all duration-300 group-hover:rotate-180" />
+                      <FaChevronDown className="mt-1 ml-1 transition-all duration-300 group-hover:rotate-180" />
                     </Link>
                     <div className="absolute z-50 hidden w-48 bg-white rounded-md shadow-lg group-hover:block ring-1 ring-black ring-opacity-5 ">
                       <div className="py-1" role="menu">

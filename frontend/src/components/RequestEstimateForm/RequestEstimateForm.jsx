@@ -1,5 +1,7 @@
-import  { useState } from "react";
+import  { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const RequestEstimateForm = () => {
   const [formData, setFormData] = useState({
@@ -45,9 +47,16 @@ const RequestEstimateForm = () => {
       toast.error('An error occurred while sending the message.');
     }
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 200, // Offset (distance from top to trigger animation)   
+    });
+  }, []);
   return (
 
-    <div className="w-full p-6 mx-auto mt-5 rounded-lg shadow-lg max-w-7xl bg-gray-50">
+    <div className="w-full p-6 mx-auto mt-10 rounded-lg shadow-lg max-w-6xl bg-gray-50 animate-fadeIn aos-box" data-aos="fade-up">
       <h2 className="mb-4 text-3xl font-semibold text-green-600">
 
         Request an Estimate :

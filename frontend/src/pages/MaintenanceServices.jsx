@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Common from "../components/common/Common";
 import Layout from "../components/Layout/Layout";
 import Map from "../components/Map/Map";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const MaintenanceServices = () => {
   const services = [
@@ -49,19 +52,14 @@ const MaintenanceServices = () => {
         "Expert roof inspections and repairs to prevent leaks and damages.",
       image: "/images/building1.jpg",
     },
-    // {
-    //   title: "Waterproofing",
-    //   description:
-    //     "Protect your home with advanced waterproofing solutions for walls and roofs.",
-    //   image: "/images/cleaning2.jpg",
-    // },
-    // {
-    //   title: "Appliance Repairs",
-    //   description:
-    //     "Repair and maintenance services for all major home appliances.",
-    //   image: "/images/cleaning2.jpg",
-    // },
+    
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 200, // Offset (distance from top to trigger animation)   
+    });
+  }, []);
 
   return (
     <>
@@ -76,10 +74,10 @@ const MaintenanceServices = () => {
         <Common />
 
         <div className="p-6 bg-gray-100">
-          <h1 className="mb-8 text-3xl font-bold text-center">
+          <h1 className="mb-8 lg:text-3xl text-2xl font-bold text-center animate-fadeIn aos-box" data-aos="fade-up">
             Maintenance Services
           </h1>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 animate-fadeIn aos-box" data-aos="fade-up">
             {services.map((service, index) => (
               <ServiceCard key={index} service={service} />
             ))}
@@ -95,7 +93,7 @@ const ServiceCard = ({ service }) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="relative overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="relative overflow-hidden bg-white rounded-lg shadow-lg animate-fadeIn aos-box" data-aos="fade-up">
       <img
         src={service.image}
         alt={service.title}

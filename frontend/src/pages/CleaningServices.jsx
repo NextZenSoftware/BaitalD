@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import Common from "../components/common/Common";
 import Map from "../components/Map/Map";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const CleaningServices = () => {
   const services = [
@@ -25,43 +28,14 @@ const CleaningServices = () => {
         "Professional sofa shampooing and stain removal to extend furniture life and maintain hygiene.",
       image: "/images/sofa1.jpg",
     },
-    // {
-    //   title: "Home Deep Cleaning",
-    //   description:
-    //     "Comprehensive cleaning of every corner, including bedrooms, living areas, and bathrooms.",
-    //   image: "/images/cleaning5.jpg",
-    // },
-    // {
-    //   title: "Window Cleaning",
-    //   description:
-    //     "Sparkling clean windows with streak-free cleaning for homes and offices.",
-    //   image: "/images/cleaning5.jpg",
-    // },
-    // {
-    //   title: "Carpet Cleaning",
-    //   description:
-    //     "Expert carpet shampooing and cleaning to remove dirt, stains, and allergens.",
-    //   image: "/images/cleaning5.jpg",
-    // },
-    // {
-    //   title: "Floor Polishing",
-    //   description:
-    //     "Floor polishing services to bring back the shine and ensure durability.",
-    //   image: "/images/cleaning5.jpg",
-    // },
-    // {
-    //   title: "Curtain Cleaning",
-    //   description:
-    //     "Gentle cleaning of curtains to remove dust and allergens without damaging fabric.",
-    //   image: "/images/cleaning5.jpg",
-    // },
-    // {
-    //   title: "Commercial Cleaning",
-    //   description:
-    //     "Professional cleaning services for offices and commercial spaces to maintain a clean environment.",
-    //   image: "/images/cleaning5.jpg",
-    // },
+    
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 200, // Offset (distance from top to trigger animation)   
+    });
+  }, []);
 
   return (
     <>
@@ -76,11 +50,11 @@ const CleaningServices = () => {
 
         <Common />
         <div className="p-6 bg-gray-100">
-          <h1 className="mb-8 text-3xl font-bold text-center">
+          <h1 className="mb-8 lg:text-3xl text-2xl font-bold text-center animate-fadeIn aos-box" data-aos="fade-up">
 
             Cleaning Services
           </h1>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 animate-fadeIn aos-box" data-aos="fade-up">
             {services.map((service, index) => (
               <ServiceCard key={index} service={service} />
             ))}
@@ -96,7 +70,7 @@ const ServiceCard = ({ service }) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="relative overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="relative overflow-hidden bg-white rounded-lg shadow-lg animate-fadeIn aos-box" data-aos="fade-up">
       <img
         src={service.image}
         alt={service.title}

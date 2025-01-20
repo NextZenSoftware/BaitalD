@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import { FaPhone } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
@@ -7,8 +7,17 @@ import toast from "react-hot-toast";
 import Common from "../components/common/Common";
 import Map from "../components/Map/Map";
 import { Helmet } from "react-helmet";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 200, // Offset (distance from top to trigger animation)   
+    });
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -59,6 +68,7 @@ const Contact = () => {
     }
   };
 
+
   return (
     <>
       <Helmet>
@@ -74,10 +84,10 @@ const Contact = () => {
       <Layout>
         <Common />
         <div className="min-h-[480px]">
-          <h1 className="px-4 mt-5 text-2xl font-bold text-center">
+          <h1 className="px-4 mt-5 lg:text-3xl text-2xl font-bold text-center animate-fadeIn aos-box" data-aos="fade-up">
             Bait Al Tahzeeb Cleaning Services & Building Maintenance LLC
           </h1>
-          <div className="flex flex-col max-w-6xl gap-10 px-4 mx-auto mt-6 md:flex-row">
+          <div className="flex flex-col max-w-6xl gap-10 px-4 mx-auto mt-6 md:flex-row animate-fadeIn aos-box" data-aos="fade-up">
             {/* Left Section */}
             <div className="w-full md:w-[380px] mx-auto h-[450px] bg-gray-100 border shadow-lg border-green-600 rounded-lg px-4 py-12 flex flex-col">
               <h1 className="text-2xl font-extrabold font-manrope">
