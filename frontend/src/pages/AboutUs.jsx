@@ -175,7 +175,7 @@ const AboutUs = () => {
             <div>
               {/* Team Members Section */}
               <div className="w-full pb-3 font-bold text-center pt-11 ">
-                <h1 className="animate-fadeIn aos-box" data-aos="fade-up text-2xl text-black lg:text-3xl md:text-2xl">
+                <h1 className="animate-fadeIn aos-box text-2xl text-black lg:text-3xl md:text-2xl" data-aos="fade-up">
                   Our{" "}
                   <span className="text-2xl text-green-600 lg:text-3xl md:text-2xl">
                     Team
