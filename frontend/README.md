@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 
 - Frontend = npm run dev
 - server.js = node server.js
+- deployed on render.com
